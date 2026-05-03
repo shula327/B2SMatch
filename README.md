@@ -1,21 +1,12 @@
 # B2SMatch: Contrastive Learning for Binary-Source Code Similarity Detection
 
 ## 📋 Project Overview
-B2SMatch is an advanced binary code analysis and vulnerability detection system built on the Django framework. By integrating deep learning technologies (ASM2VEC and BERT) and contrastive learning, it provides security researchers, reverse engineers, and software developers with a powerful platform for binary code analysis.
+B2SMatch is a Django-based system for binary similarity analysis and vulnerability detection with deep learning (ASM2VEC/BERT) and contrastive learning.
 
 ### Core Features
-- 🔍 **Binary Similarity Analysis**
-  - Support for binary formats (ELF, PE)
-  - Deep learning-based code semantic analysis
-  - Visualized similarity comparison results
-- 🛡️ **Vulnerability Detection**
-  - CWE vulnerability type identification
-  - Vulnerability feature extraction and matching
-  - Detailed vulnerability reporting
-- 📊 **Analysis Report Management**
-  - Historical analysis tracking
-  - Batch analysis support
-  - Report export functionality
+- 🔍 Binary similarity analysis (ELF/PE)
+- 🛡️ Vulnerability detection with CWE reporting
+- 📊 Analysis report management (history/export)
 
 ## 💻 System Requirements for Model Training
 - Python 3.8+
@@ -59,8 +50,8 @@ pip install -r requirements.txt
 
 ### 2. System Configuration
 ```bash
-# Create .env file
-cp .env.example .env
+# Enter Django project directory (manage.py is here)
+cd bin2src_system
 
 # Initialize database
 python manage.py migrate
@@ -74,54 +65,6 @@ python manage.py createsuperuser
 # Development environment
 python manage.py runserver
 ```
-
-## 📚 Detailed Features
-
-### 🔍 Binary Similarity Analysis
-1.  Supported File Formats:
-   - 💻Windows: EXE
-   - 🐧 Linux: ELF
-
-2.  Analysis Features:
-   - Function-level similarity comparison
-
-3.  Output Results:
-   - Function-specific similarity scores (0-100%)
-   - Function mapping relationships
-
-### 🛡️ Vulnerability Detection
-1.  Supported Vulnerability Types:
-   - Buffer overflow
-   - Integer overflow
-   - Format string vulnerability
-   - Null pointer dereference
-   - Memory leak
-
-2.  Detection Method:
-   - Deep learning inference
-   - Contrastive learning
-
-3.  Report Contents:
-   - Vulnerability type and CWE number
-   - Vulnerable function identification
-   - Remediation suggestions
-
-## ⚡ Performance Optimization
-1.  Hardware Configuration:
-   - CPU: 8+ cores
-   - RAM: 16GB+
-   - GPU: NVIDIA GPU with 8GB+
-
-2.  System Settings:
-   - Use SSD storage
-   - Enable CUDA support
-   - djust worker processes
-
-## 🔒 Security Guidelines
-- Regular dependency updates
-- Environment variable management with .env
-- File upload size restrictions
-- Access control implementation
 
 ## 📄 License
 This project is licensed under the MIT License. See the [LICENSE] file for details. 
